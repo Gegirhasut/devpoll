@@ -7,8 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$optionId = isset($_POST['option_id']) ? (int)$_POST['option_id'] : 0;
-$pollId   = isset($_POST['poll_id'])   ? (int)$_POST['poll_id']   : 0;
+$optionId = $_POST['option_id'] ?? 0;
+$pollId   = $_POST['poll_id']   ?? 0;
 
 if ($optionId <= 0 || $pollId <= 0) {
     header('Location: index.php?error=invalid');
@@ -18,8 +18,7 @@ if ($optionId <= 0 || $pollId <= 0) {
 $db = get_db();
 
 // Verify option belongs to poll
-$check = $db->prepare("SELECT id FROM options WHERE id = :oid AND poll_id = :pid");
-$check->execute([':oid' => $optionId, ':pid' => $pollId]);
+$check = $db->query("SELECT id FROM options WHERE id = $optionId AND poll_id = $pollId");
 
 if (!$check->fetch()) {
     header('Location: index.php?error=invalid');

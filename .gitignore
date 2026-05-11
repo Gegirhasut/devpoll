@@ -1,0 +1,3 @@
+devpoll.sqlite
+*.sqlite
+.DS_Store

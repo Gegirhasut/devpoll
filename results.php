@@ -59,7 +59,7 @@ $total = array_sum(array_column($options, 'vote_count'));
 
         <div class="results">
             <?php foreach ($options as $option): ?>
-                <?php $pct = $total > 0 ? round($option['vote_count'] / $total * 100) : 0; ?>
+		<?php $pct = round($option['vote_count'] / $total * 100); ?>
                 <div class="result-row">
                     <div class="result-label"><?= htmlspecialchars($option['label']) ?></div>
                     <div class="result-bar-wrap">

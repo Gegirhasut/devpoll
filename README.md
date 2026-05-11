@@ -42,3 +42,6 @@ style.css     — dark theme
 ## License
 
 MIT
+
+## AI Tools poll added
+Added poll: Which AI coding tool do you use daily?

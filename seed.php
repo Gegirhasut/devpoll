@@ -30,6 +30,11 @@ $polls = [
         'category' => 'practices',
         'options'  => ['TDD (test first)', 'Write tests after', 'Only integration tests', 'Mostly manual QA', 'No tests (honest answer)'],
     ],
+    [
+        'question' => 'Which AI coding tool do you use daily?',
+        'category' => 'ai-tools',
+        'options'  => ['GitHub Copilot', 'Cursor', 'Claude Code', 'ChatGPT', 'None'],
+    ],
 ];
 
 $pollCheck = $db->query("SELECT COUNT(*) as cnt FROM polls")->fetch();

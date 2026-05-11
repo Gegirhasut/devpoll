@@ -24,7 +24,7 @@ seed.php      — seeds initial poll data
 style.css     — dark theme
 ```
 
-## PR scenario backlog (for QALens testing)
+## PR scenario backlog (for QALens.AI testing)
 
 | # | Branch | Description | Type |
 |---|--------|-------------|------|

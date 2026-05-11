@@ -15,3 +15,5 @@ jobs:
         uses: Gegirhasut/qalens-github-action@master
         with:
           api-key: ${{ secrets.QALENS_API_KEY }}
+	env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

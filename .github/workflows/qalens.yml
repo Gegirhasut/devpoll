@@ -1,0 +1,17 @@
+name: QALens
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  qalens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze PR with QALens
+        uses: Gegirhasut/qalens-github-action@master
+        with:
+          api-key: ${{ secrets.QALENS_API_KEY }}
